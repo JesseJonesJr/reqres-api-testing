@@ -35,8 +35,75 @@ Fetches details of user with ID 2.
 
 ---
 
-##  Upcoming Test Cases
+##  Test Case 3: POST Create User
 
-- POST Create User
-- PUT Update User
-- POST Login (with token handling)
+- **Method**: POST
+- **Endpoint**: /api/users
+
+### Description:
+Creates a new user with `name` and `job` fields.
+
+###  Request Payload:
+```json
+  "name": "Jesse QA",
+  "job": "Automation Engineer"
+```
+
+### Assertions:
+
+    Status code is 201
+
+    name = "Jesse QA"
+
+    job = "Automation Engineer"
+
+    id and createdAt fields exist
+
+---
+
+##  Test Case 4: PUT Update User
+
+- **Method**: PUT  
+- **Endpoint**: /api/users/2
+
+###  Description:
+Updates an existing user's name and job.
+
+###  Request Payload:
+```json 
+  "name": "Jesse QA",
+  "job": "Lead QA Engineer"
+```
+
+ Assertions:
+
+    Status code is 200
+
+    name = "Jesse QA"
+
+    job = "Lead QA Engineer"
+
+    updatedAt timestamp is returned
+---
+
+## ✅ Test Case 5: POST Login
+
+- **Method**: POST  
+- **Endpoint**: /api/login
+
+###  Description:
+Logs in a user with valid credentials and returns an authentication token.
+
+###  Request Payload:
+```json
+  "email": "eve.holt@reqres.in",
+  "password": "cityslicka"
+```
+
+ Assertions:
+
+    Status code is 200
+
+    token exists and is a non-empty string
+
+    Response time is under 1000ms
