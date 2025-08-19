@@ -1,4 +1,6 @@
-API Testing with Postman – Reqres Simulation
+# API Testing with Postman – Reqres Simulation
+
+## Overview
 
 This project showcases functional API testing using [Postman](https://www.postman.com/) and the public [Reqres API](https://reqres.in). It simulates real-world API testing tasks and includes detailed test cases, assertions, and documentation.
 
@@ -22,12 +24,17 @@ This project showcases functional API testing using [Postman](https://www.postma
 
 reqres-api-testing /
 
-├── postman_collection.json
+├── postman_collection.json # Exported Postman collection
 
-├── api-test-cases.md
+├── api-test-cases.md # Manual test documentation
 
-├── README.md
+├── README.md # Project details
 
+## Test Coverage
+- ✅ Positive and negative test scenarios  
+- ✅ Status code validation  
+- ✅ Response body and schema validation  
+- ✅ Token handling and authentication checks  
 
 ##  How to Use
 
@@ -38,4 +45,6 @@ reqres-api-testing /
 
 ---
 
-> This project is part of my QA engineering portfolio and represents foundational knowledge in API testing using Postman.
+## Disclaimer
+This is an educational portfolio project and does not represent production-level testing.  
+The [Reqres API](https://reqres.in) is a public demo API provided for practicing API testing.
